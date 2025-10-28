@@ -42,22 +42,6 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
-## Notable changes in `v2025.0.3`
-
-- Added `polePosition` property to `RaceResult` object.
-
-To accommodate this change the JSON Schema is bumped to version `v6.1.0`.
-
-
-## Notable changes in `v2025.0.2`
-
-- Added `direction`, `length` and `turns` properties to `Circuit` object.
-- Added `direction` and `turns` properties to `Race` object (`courseLength` already exists).
-- Added `driversChampionshipDecider` and `constructorsChampionshipDecider` properties to `Race` object.
-
-To accommodate these changes the JSON Schema is bumped to version `v6.0.0`.
-
-
 ## F1DB JSON Schema
 
 The main [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/current/single/f1db.schema.json)
@@ -68,25 +52,7 @@ schema files must be used.
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
-#### Schema version compatibility / history
-
-| Version                 | Schema Version                                                                                                                                                                                                                                    |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `>=` `v2025.0.3`        | [`f1db.schema.json v6.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.1.0/single/f1db.schema.json), [`f1db-*.schema.json v6.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.1.0/splitted)                |
-| `>=` `v2025.0.2`        | [`f1db.schema.json v6.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.0.0/single/f1db.schema.json), [`f1db-*.schema.json v6.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.0.0/splitted)                |
-| `>=` `v2024.19.0`       | [`f1db.schema.json v5.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v5.0.0/single/f1db.schema.json), [`f1db-*.schema.json v5.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v5.0.0/splitted)                |
-| `>=` `v2024.0.0.beta2`  | [`f1db.schema.json v4.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.1.0/single/f1db.schema.json), [`f1db-*.schema.json v4.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.1.0/splitted)                |
-| `>=` `v2024.0.0.beta1`  | [`f1db.schema.json v4.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.0.0/single/f1db.schema.json), [`f1db-*.schema.json v4.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.0.0/splitted)                |
-| `>=` `v2023.22.0`       | [`onlyf1-db.schema.json v3.2.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v3.2.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.2.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v3.2.0/splitted) |
-| `>=` `v2023.8.0`        | [`onlyf1-db.schema.json v3.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v3.1.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v3.1.0/splitted) |
-| `>=` `v2023.4.0`        | [`onlyf1-db.schema.json v3.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v3.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v3.0.0/splitted) |
-| `>=` `v2023.0.0.beta1`  | [`onlyf1-db.schema.json v2.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v2.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v2.0.0/splitted) |
-| `>=` `v2022.1.1`        | [`f1db-json-schema-v1.4.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.4.0.json)                                                                                                                   |
-| `>=` `v2022.0.0`        | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                   |
-| `>=` `v2022.0.0.beta4`  | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                   |
-| `>=` `v2022.0.0.beta3`  | [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.2.0.json)                                                                                                                   |
-| `>=` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.1.0.json)                                                                                                                   |
-| `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                   |
+See the [Changelog](./CHANGELOG.md) for details about schema changes and version compatibility.
 
 
 ## F1DB SQL / SQLite Database

@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.f1db.com/schema/v6.1.0/single/f1db.schema.json",
+  "$id": "https://www.f1db.com/schema/v6.2.0/single/f1db.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB JSON Schema",
@@ -819,7 +819,7 @@
           "description": "The length of the current or most recently used configuration of the circuit in kilometers."
         },
         "turns": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
           "description": "The number of turns (corners) in the current or most recently used configuration of the circuit."
         },
@@ -1635,7 +1635,7 @@
           "description": "The length of the circuit (race course) in kilometers."
         },
         "turns": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
           "description": "The number of turns (corners) in the configuration of the circuit."
         },
@@ -2836,6 +2836,13 @@
           "pattern": "^[A-Z]{3}$",
           "description": "The unique ISO 3166-1 alpha-3 code of the country."
         },
+        "iocCode": {
+          "type": ["string", "null"],
+          "minLength": 3,
+          "maxLength": 3,
+          "pattern": "^[A-Z]{3}$",
+          "description": "The unique International Olympic Committee (IOC) code of the country."
+        },
         "name": {
           "type": "string",
           "description": "The name of the country."
@@ -2853,6 +2860,7 @@
         "id",
         "alpha2Code",
         "alpha3Code",
+        "iocCode",
         "name",
         "demonym",
         "continentId"
@@ -2924,7 +2932,7 @@
         "W12",
         null
       ],
-      "description": "The engine aspiration."
+      "description": "The engine configuration."
     },
     "EngineAspiration": {
       "type": ["string", "null"],

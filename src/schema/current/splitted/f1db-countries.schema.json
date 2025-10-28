@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.f1db.com/schema/v6.1.0/splitted/f1db-countries.schema.json",
+  "$id": "https://www.f1db.com/schema/v6.2.0/splitted/f1db-countries.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB Countries JSON Schema",
@@ -31,6 +31,13 @@
           "pattern": "^[A-Z]{3}$",
           "description": "The unique ISO 3166-1 alpha-3 code of the country."
         },
+        "iocCode": {
+          "type": ["string", "null"],
+          "minLength": 3,
+          "maxLength": 3,
+          "pattern": "^[A-Z]{3}$",
+          "description": "The unique International Olympic Committee (IOC) code of the country."
+        },
         "name": {
           "type": "string",
           "description": "The name of the country."
@@ -48,6 +55,7 @@
         "id",
         "alpha2Code",
         "alpha3Code",
+        "iocCode",
         "name",
         "demonym",
         "continentId"

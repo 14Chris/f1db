@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.f1db.com/schema/v6.1.0/splitted/f1db-circuits.schema.json",
+  "$id": "https://www.f1db.com/schema/v6.2.0/splitted/f1db-circuits.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB Circuits JSON Schema",
@@ -66,7 +66,7 @@
           "description": "The length of the current or most recently used configuration of the circuit in kilometers."
         },
         "turns": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
           "description": "The number of turns (corners) in the current or most recently used configuration of the circuit."
         },

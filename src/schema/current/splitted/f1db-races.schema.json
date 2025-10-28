@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.f1db.com/schema/v6.1.0/splitted/f1db-races.schema.json",
+  "$id": "https://www.f1db.com/schema/v6.2.0/splitted/f1db-races.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB Races JSON Schema",
@@ -72,7 +72,7 @@
           "description": "The length of the circuit (race course) in kilometers."
         },
         "turns": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
           "description": "The number of turns (corners) in the configuration of the circuit."
         },
